@@ -10,6 +10,8 @@ html {
 
 .card {
     /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
@@ -17,6 +19,10 @@ html {
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 15px 0;
 }
 
@@ -38,9 +44,16 @@ html {
     border-top: 1px solid #D7DBDD;
     background-color: #EEF3F5;
 }
+.conteudo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .cardGroup {
-    /* display */
+   display: flex;
+   /* justify-content: center; */
+   width: 710px;
   
     border: 1px solid #CAD0D2;
     border-radius: 4px;
@@ -49,7 +62,9 @@ html {
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow: 1;
+      flex-basis: 0;
+      flex-shrink: 1;
       border: none;
       border-radius: 0;
     }
@@ -60,4 +75,19 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 33%;
+    }
+
+    @media screen and (max-width: 320px){
+       .cardGroup{
+         width: 320px;
+         flex-direction: column;
+         
+       }
+       .cardGroup__card{
+         flex-basis: 33%;
+       }
+
     }
